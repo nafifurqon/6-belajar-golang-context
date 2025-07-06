@@ -95,7 +95,7 @@ func TestContextWithoutCancel(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 }
 
-func TestContextWicthContextCancel(t *testing.T) {
+func TestContextWithContextCancel(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 
 	parent := context.Background()
