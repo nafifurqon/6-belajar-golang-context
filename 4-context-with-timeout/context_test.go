@@ -102,7 +102,7 @@ func CreateCounterWithContextSlow(ctx context.Context) chan int {
 	return destination
 }
 
-func TestContextWicthCancel(t *testing.T) {
+func TestContextWithoutCancel(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 
 	destination := CreateCounter()
@@ -116,7 +116,7 @@ func TestContextWicthCancel(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 }
 
-func TestContextWicthContextCancel(t *testing.T) {
+func TestContextWithContextCancel(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 
 	parent := context.Background()
@@ -140,7 +140,7 @@ func TestContextWicthContextCancel(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 }
 
-func TestContextWicthTimeout(t *testing.T) {
+func TestContextWithTimeout(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 
 	parent := context.Background()
