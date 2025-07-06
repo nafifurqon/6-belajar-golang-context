@@ -81,7 +81,7 @@ func CreateCounterWithContext(ctx context.Context) chan int {
 	return destination
 }
 
-func TestContextWicthCancel(t *testing.T) {
+func TestContextWithoutCancel(t *testing.T) {
 	fmt.Println("Total Goroutine", runtime.NumGoroutine())
 
 	destination := CreateCounter()
